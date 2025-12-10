@@ -257,3 +257,22 @@ function renderPets(filterType) {
         `;
     });
 }
+
+// Form submission handler
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('.application-form');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show thank you message
+            alert('Thank you for filling out the application form! We will review your application and get back to you soon.');
+            
+            // Redirect to home page after a brief delay
+            setTimeout(function() {
+                window.location.href = 'homePage.html';
+            }, 500);
+        });
+    }
+});
